@@ -14,7 +14,10 @@ import requests
 from bs4 import BeautifulSoup
 with open("index.html") as fp:
     soup = BeautifulSoup(fp,'lxml')
-    soup = BeautifulSoup("<b>Extremely bold</b>","lxml")
+    tag3 = soup.title
+    print(tag3)
+    print(tag3.parent)
+    # soup = BeautifulSoup("<b>Extremely bold</b>","lxml")
     print(type(soup))
     print(soup.name)
 
@@ -32,5 +35,29 @@ with open("index.html") as fp:
     # print(type(soup1.string))
     soup1.string.replace_with("hiiiiiiii")
     print(tag2)
+
+# Going sideways
+
+sibling_soup = BeautifulSoup("<a><b>TutorialsPoint</b><c><strong>The Biggest Online Tutorials Library, It's all Free</strong></b></a>",'lxml')
+print(sibling_soup.prettify())
+
+#.next_sibling and .previous_sibling
+print(sibling_soup.b.next_sibling)
+print(sibling_soup.c.previous_sibling)
+
+print(sibling_soup.b.next_element)
+print(sibling_soup.a.previous_element)
+
+#.next_siblings and .previous_siblings
+# for sibling in soup.a.next_siblings:
+#     print(sibling)
+
+# for s in soup.find(id="link3").previous_siblings:
+#     print(s)
+
+for element in sibling_soup.b.next_elements:
+    print(repr(element))   
+
+
 
 
