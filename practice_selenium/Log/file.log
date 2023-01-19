@@ -1,0 +1,10 @@
+16/01/2023:WARNING:logfile:This is a warning message
+16/01/2023:ERROR:logfile:This is an error message
+16/01/2023:CRITICAL:logfile:This is a critical message
+16/01/2023:DEBUG:logfile:This is a debug message
+16/01/2023:INFO:logfile:This is an info message
+16/01/2023:WARNING:logfile:This is a warning message
+16/01/2023:ERROR:logfile:This is an error message
+16/01/2023:CRITICAL:logfile:This is a critical message
+16/01/2023:INFO:test_demo:this is my first test case
+16/01/2023:INFO:test_demo:test case pass
